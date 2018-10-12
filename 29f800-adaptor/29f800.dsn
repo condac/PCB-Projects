@@ -33,17 +33,21 @@
     )
   )
   (placement
-    (component "Package_SO:TSOP-I-48_18.4x12mm_P0.5mm"
-      (place U2 104648 -87122 front 270 (PN 29F800))
-    )
-    (component Capacitor_SMD:C_0603_1608Metric
+    (component Resistor_SMD:R_0603_1608Metric
+      (place R7 107696 -92456 back 0 (PN 10k))
+      (place R5 109728 -89408 back 270 (PN 0))
       (place C2 108712 -111252 front 90 (PN 0.1uF))
       (place R2 105156 -112014 front 0 (PN 10K))
     )
-    (component Capacitor_SMD:C_0603_1608Metric::1
+    (component Resistor_SMD:R_0603_1608Metric::1
+      (place R6 108966 -85598 back 180 (PN 0))
+      (place R4 100076 -63754 front 180 (PN 0))
       (place C1 101092 -111252 front 90 (PN 0.1uF))
       (place R3 106426 -73914 front 0 (PN 10K))
       (place R1 103378 -73914 front 180 (PN 10K))
+    )
+    (component "Package_SO:TSOP-I-48_18.4x12mm_P0.5mm"
+      (place U2 104648 -87122 front 270 (PN 29F800))
     )
     (component Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Horizontal
       (place J1 103632 -70358 front 90 (PN Conn_01x02))
@@ -56,6 +60,34 @@
     )
   )
   (library
+    (image Resistor_SMD:R_0603_1608Metric
+      (outline (path signal 50  1480 -730  -1480 -730))
+      (outline (path signal 50  1480 730  1480 -730))
+      (outline (path signal 50  -1480 730  1480 730))
+      (outline (path signal 50  -1480 -730  -1480 730))
+      (outline (path signal 120  -162.779 -510  162.779 -510))
+      (outline (path signal 120  -162.779 510  162.779 510))
+      (outline (path signal 100  800 -400  -800 -400))
+      (outline (path signal 100  800 400  800 -400))
+      (outline (path signal 100  -800 400  800 400))
+      (outline (path signal 100  -800 -400  -800 400))
+      (pin RoundRect[T]Pad_875x950_219.582_um 2 787.5 0)
+      (pin RoundRect[T]Pad_875x950_219.582_um 1 -787.5 0)
+    )
+    (image Resistor_SMD:R_0603_1608Metric::1
+      (outline (path signal 100  -800 -400  -800 400))
+      (outline (path signal 100  -800 400  800 400))
+      (outline (path signal 100  800 400  800 -400))
+      (outline (path signal 100  800 -400  -800 -400))
+      (outline (path signal 120  -162.779 510  162.779 510))
+      (outline (path signal 120  -162.779 -510  162.779 -510))
+      (outline (path signal 50  -1480 -730  -1480 730))
+      (outline (path signal 50  -1480 730  1480 730))
+      (outline (path signal 50  1480 730  1480 -730))
+      (outline (path signal 50  1480 -730  -1480 -730))
+      (pin RoundRect[T]Pad_875x950_219.582_um 1 -787.5 0)
+      (pin RoundRect[T]Pad_875x950_219.582_um 2 787.5 0)
+    )
     (image "Package_SO:TSOP-I-48_18.4x12mm_P0.5mm"
       (outline (path signal 50  -10550 -6250  -10550 6250))
       (outline (path signal 50  10550 -6250  -10550 -6250))
@@ -116,34 +148,6 @@
       (pin Rect[T]Pad_1100x250_um 46 9750 4750)
       (pin Rect[T]Pad_1100x250_um 47 9750 5250)
       (pin Rect[T]Pad_1100x250_um 48 9750 5750)
-    )
-    (image Capacitor_SMD:C_0603_1608Metric
-      (outline (path signal 50  1480 -730  -1480 -730))
-      (outline (path signal 50  1480 730  1480 -730))
-      (outline (path signal 50  -1480 730  1480 730))
-      (outline (path signal 50  -1480 -730  -1480 730))
-      (outline (path signal 120  -162.779 -510  162.779 -510))
-      (outline (path signal 120  -162.779 510  162.779 510))
-      (outline (path signal 100  800 -400  -800 -400))
-      (outline (path signal 100  800 400  800 -400))
-      (outline (path signal 100  -800 400  800 400))
-      (outline (path signal 100  -800 -400  -800 400))
-      (pin RoundRect[T]Pad_875x950_219.582_um 2 787.5 0)
-      (pin RoundRect[T]Pad_875x950_219.582_um 1 -787.5 0)
-    )
-    (image Capacitor_SMD:C_0603_1608Metric::1
-      (outline (path signal 100  -800 -400  -800 400))
-      (outline (path signal 100  -800 400  800 400))
-      (outline (path signal 100  800 400  800 -400))
-      (outline (path signal 100  800 -400  -800 -400))
-      (outline (path signal 120  -162.779 510  162.779 510))
-      (outline (path signal 120  -162.779 -510  162.779 -510))
-      (outline (path signal 50  -1480 -730  -1480 730))
-      (outline (path signal 50  -1480 730  1480 730))
-      (outline (path signal 50  1480 730  1480 -730))
-      (outline (path signal 50  1480 -730  -1480 -730))
-      (pin RoundRect[T]Pad_875x950_219.582_um 1 -787.5 0)
-      (pin RoundRect[T]Pad_875x950_219.582_um 2 787.5 0)
     )
     (image Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Horizontal
       (outline (path signal 100  2135 1270  4040 1270))
@@ -386,9 +390,6 @@
     (net /P3
       (pins U2-19 U1-3)
     )
-    (net /P1
-      (pins U2-17 U1-1)
-    )
     (net /P38
       (pins U2-6 U1-38)
     )
@@ -409,9 +410,6 @@
     )
     (net /P32
       (pins U2-48 U1-32)
-    )
-    (net /P31
-      (pins U2-47 U1-31)
     )
     (net /P29
       (pins U2-45 U1-29)
@@ -441,16 +439,28 @@
       (pins U2-16 J1-2 R1-2)
     )
     (net VCC
-      (pins U2-37 C2-1 R3-1 R2-2 R1-1 U1-21)
+      (pins R7-2 U2-37 C2-1 R3-1 R2-2 R1-1 U1-21)
     )
     (net VSS
       (pins U2-27 U2-46 C2-2 C1-2 J1-1 U1-30 U1-11)
     )
+    (net /P1_2
+      (pins R6-1 R4-1 U2-17)
+    )
+    (net /P1_1
+      (pins R4-2 U1-1)
+    )
+    (net /P31_1
+      (pins R6-2 R5-2 U1-31)
+    )
+    (net /P31_2
+      (pins R7-1 R5-1 U2-47)
+    )
     (class kicad_default "" /P1 /P10 /P12 /P13 /P14 /P15 /P16 /P17 /P18 /P19
-      /P2 /P20 /P22 /P23 /P24 /P25 /P26 /P27 /P28 /P29 /P3 /P31 /P32 /P33
-      /P34 /P35 /P36 /P37 /P38 /P39 /P4 /P40 /P5 /P6 /P7 /P8 /P9 /P_A18 /P_RST
-      /P_WE "Net-(U2-Pad10)" "Net-(U2-Pad13)" "Net-(U2-Pad14)" "Net-(U2-Pad15)"
-      "Net-(U2-Pad9)" VCC VSS
+      /P1_1 /P1_2 /P2 /P20 /P22 /P23 /P24 /P25 /P26 /P27 /P28 /P29 /P3 /P31
+      /P31_1 /P31_2 /P32 /P33 /P34 /P35 /P36 /P37 /P38 /P39 /P4 /P40 /P5 /P6
+      /P7 /P8 /P9 /P_A18 /P_RST /P_WE "Net-(U2-Pad10)" "Net-(U2-Pad13)" "Net-(U2-Pad14)"
+      "Net-(U2-Pad15)" "Net-(U2-Pad9)" VCC VSS
       (circuit
         (use_via Via[0-1]_800:400_um)
       )

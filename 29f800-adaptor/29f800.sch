@@ -5,7 +5,7 @@ EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
-Title ""
+Title "29F800 to Amiga kickstart socket Adapter"
 Date ""
 Rev ""
 Comp ""
@@ -191,7 +191,7 @@ Wire Wire Line
 Wire Wire Line
 	7750 4250 8450 4250
 Text Label 2300 2350 0    60   ~ 0
-P1
+P1_1
 Text Label 2300 2450 0    60   ~ 0
 P2
 Text Label 2300 2550 0    60   ~ 0
@@ -253,7 +253,7 @@ P29
 Text Label 4600 3350 0    60   ~ 0
 P_Vss
 Text Label 4600 3250 0    60   ~ 0
-P31
+P31_1
 Text Label 4600 3150 0    60   ~ 0
 P32
 Text Label 4600 3050 0    60   ~ 0
@@ -301,7 +301,7 @@ P15
 Text Label 5700 4150 0    60   ~ 0
 P3
 Text Label 5700 3950 0    60   ~ 0
-P1
+P1_2
 Text Label 5700 4250 0    60   ~ 0
 P4
 Text Label 5700 3450 0    60   ~ 0
@@ -327,7 +327,7 @@ P32
 Text Label 8250 3350 0    60   ~ 0
 P22
 Text Label 8250 2450 0    60   ~ 0
-P31
+P31_2
 Text Label 8250 2550 0    60   ~ 0
 P_Vss
 Text Label 8250 2650 0    60   ~ 0
@@ -585,4 +585,103 @@ Wire Wire Line
 	4800 5300 4800 5500
 Wire Wire Line
 	4800 6050 4800 5800
+$Comp
+L Device:R R4
+U 1 1 5BC0BC15
+P 5950 5300
+F 0 "R4" V 5743 5300 50  0000 C CNN
+F 1 "0" V 5834 5300 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 5880 5300 50  0001 C CNN
+F 3 "~" H 5950 5300 50  0001 C CNN
+	1    5950 5300
+	0    1    1    0   
+$EndComp
+Text Label 5700 5300 2    50   ~ 0
+P1_1
+Text Label 6200 5300 0    50   ~ 0
+P1_2
+Wire Wire Line
+	5700 5300 5800 5300
+Wire Wire Line
+	6100 5300 6200 5300
+$Comp
+L Device:R R5
+U 1 1 5BC171B2
+P 5950 5650
+F 0 "R5" V 5743 5650 50  0000 C CNN
+F 1 "0" V 5834 5650 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 5880 5650 50  0001 C CNN
+F 3 "~" H 5950 5650 50  0001 C CNN
+	1    5950 5650
+	0    1    1    0   
+$EndComp
+Text Label 5700 5650 2    50   ~ 0
+P31_1
+Text Label 6200 5650 0    50   ~ 0
+P31_2
+Wire Wire Line
+	5700 5650 5800 5650
+Wire Wire Line
+	6100 5650 6200 5650
+$Comp
+L Device:R R6
+U 1 1 5BC1B265
+P 5950 6000
+F 0 "R6" V 5743 6000 50  0000 C CNN
+F 1 "0" V 5834 6000 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 5880 6000 50  0001 C CNN
+F 3 "~" H 5950 6000 50  0001 C CNN
+	1    5950 6000
+	0    1    1    0   
+$EndComp
+Text Label 5700 6000 2    50   ~ 0
+P31_1
+Text Label 6200 6000 0    50   ~ 0
+P1_2
+Wire Wire Line
+	5700 6000 5800 6000
+Wire Wire Line
+	6100 6000 6200 6000
+$Comp
+L Device:R R7
+U 1 1 5BC1FF61
+P 5950 6350
+F 0 "R7" V 5743 6350 50  0000 C CNN
+F 1 "10k" V 5834 6350 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 5880 6350 50  0001 C CNN
+F 3 "~" H 5950 6350 50  0001 C CNN
+	1    5950 6350
+	0    1    1    0   
+$EndComp
+Text Label 6200 6350 0    50   ~ 0
+P31_2
+Wire Wire Line
+	5700 6350 5800 6350
+Wire Wire Line
+	6100 6350 6200 6350
+$Comp
+L power:VCC #PWR08
+U 1 1 5BC24639
+P 5700 6350
+F 0 "#PWR08" H 5700 6200 50  0001 C CNN
+F 1 "VCC" H 5717 6523 50  0000 C CNN
+F 2 "" H 5700 6350 50  0001 C CNN
+F 3 "" H 5700 6350 50  0001 C CNN
+	1    5700 6350
+	1    0    0    -1  
+$EndComp
+Wire Notes Line
+	7650 6450 5400 6450
+Wire Notes Line
+	5400 5750 7650 5750
+Text Notes 6600 6150 0    50   ~ 0
+Connect if using A500 V5 \nboard with pin bug
+Wire Notes Line
+	5400 5000 7650 5000
+Wire Notes Line
+	5400 5000 5400 6450
+Wire Notes Line
+	7650 5000 7650 6450
+Text Notes 6500 5450 0    50   ~ 0
+Connect if using boards \nwithout the wrong pin bug \n(Almost all boards)
 $EndSCHEMATC
